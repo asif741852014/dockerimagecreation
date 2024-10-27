@@ -1,0 +1,19 @@
+name: Package Event Tracker
+
+on:
+  registry_package:
+    types:
+      - published
+      - updated
+      - deleted
+
+jobs:
+  log_package_event:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Log Package Event
+        run: |
+          echo "Package Action: ${{ github.event.action }}"
+          echo "Package Name: ${{ github.event.registry_package.name }}"
+          echo "Package Version: ${{ github.event.registry_package.package_version.version }}"
