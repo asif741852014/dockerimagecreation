@@ -1,0 +1,1 @@
+echo "hai from the docker container image"

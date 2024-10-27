@@ -1,0 +1,12 @@
+name: a
+on:
+  push:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "starting"
+        docker --version
+        docker build -t image1:v1.0.0 .
+        docker images
