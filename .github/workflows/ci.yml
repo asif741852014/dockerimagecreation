@@ -11,3 +11,4 @@ jobs:
         docker --version
         docker build -t image1:v1.0.0 .
         docker images
+        docker run --name image123 image1:v1.0.0
