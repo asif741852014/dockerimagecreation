@@ -1,6 +1,7 @@
 name: Package Event Tracker
 
 on:
+  workflow_dispatch:
   registry_package:
     types:
       - published
